@@ -6,6 +6,7 @@ use App\Http\Controllers\InfoUserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\DepartementController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +33,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('billing', function () {
 		return view('billing');
 	})->name('billing');
+
+	Route::resource('departement', DepartementController::class);
 
 	Route::get('profile', function () {
 		return view('profile');
