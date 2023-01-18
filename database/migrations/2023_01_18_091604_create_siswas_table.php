@@ -13,11 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('departements', function (Blueprint $table) {
-            $table->integer('id_dept',4)->primarykey();
-            $table->string('id_secd',3);
-            $table->string('name',25);
-
+        Schema::create('siswas', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('nis')->unique();
+            $table->string('jenis_kelamin');
+            $table->string('agama');
+            $table->date('tgl_lahir');
+            $table->text('alamat');
+            $table->timestamps();
         });
     }
 
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departements');
+        Schema::dropIfExists('siswas');
     }
 };

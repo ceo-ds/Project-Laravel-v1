@@ -17,7 +17,7 @@
           <div class="col-auto my-auto">
             <div class="h-100">
               <h5 class="mb-1">
-                Alec Thompson
+                Degia Parlopa
               </h5>
               <p class="mb-0 font-weight-bold text-sm">
                 CEO / Co-Founder
@@ -29,7 +29,7 @@
               <ul class="nav nav-pills nav-fill p-1 bg-transparent" role="tablist">
                 <li class="nav-item">
                   <a class="nav-link mb-0 px-0 py-1 active " data-bs-toggle="tab" href="javascript:;" role="tab" aria-selected="true">
-                    <svg class="text-dark" width="16px" height="16px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="text-dark" width="16px" height="16px" viewBox="0 0 42 42" version="1.1" xmlns="#" xmlns:xlink="#">
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                           <g transform="translate(1716.000000, 291.000000)">
@@ -48,7 +48,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="javascript:;" role="tab" aria-selected="false">
-                    <svg class="text-dark" width="16px" height="16px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="text-dark" width="16px" height="16px" viewBox="0 0 40 44" version="1.1" xmlns="#" xmlns:xlink="#">
                       <title>document</title>
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(-1870.000000, -591.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -67,7 +67,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="javascript:;" role="tab" aria-selected="false">
-                    <svg class="text-dark" width="16px" height="16px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="text-dark" width="16px" height="16px" viewBox="0 0 40 40" version="1.1" xmlns="#" xmlns:xlink="#">
                       <title>settings</title>
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(-2020.000000, -442.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -161,14 +161,14 @@
             </div>
             <div class="card-body p-3">
               <p class="text-sm">
-                Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).
+                Hi, I’m Degia Parlopa, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).
               </p>
               <hr class="horizontal gray-light my-4">
               <ul class="list-group">
-                <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full Name:</strong> &nbsp; Alec M. Thompson</li>
-                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong> &nbsp; (44) 123 1234 123</li>
-                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; alecthompson@mail.com</li>
-                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Location:</strong> &nbsp; USA</li>
+                <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full Name:</strong> &nbsp; Degia Parlopa Pasaribu</li>
+                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong> &nbsp; (+62) 8128 2310 886</li>
+                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; degia56.dp@mail.com</li>
+                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Location:</strong> &nbsp; IDN</li>
                 <li class="list-group-item border-0 ps-0 pb-0">
                   <strong class="text-dark text-sm">Social:</strong> &nbsp;
                   <a class="btn btn-facebook btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
@@ -197,7 +197,7 @@
                     <img src="../assets/img/kal-visuals-square.jpg" alt="kal" class="border-radius-lg shadow">
                   </div>
                   <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Sophie B.</h6>
+                    <h6 class="mb-0 text-sm">Unknown</h6>
                     <p class="mb-0 text-xs">Hi! I need more information..</p>
                   </div>
                   <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
@@ -207,7 +207,7 @@
                     <img src="../assets/img/marie.jpg" alt="kal" class="border-radius-lg shadow">
                   </div>
                   <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Anne Marie</h6>
+                    <h6 class="mb-0 text-sm">Unknown</h6>
                     <p class="mb-0 text-xs">Awesome work, can you..</p>
                   </div>
                   <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
@@ -217,7 +217,7 @@
                     <img src="../assets/img/ivana-square.jpg" alt="kal" class="border-radius-lg shadow">
                   </div>
                   <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Ivanna</h6>
+                    <h6 class="mb-0 text-sm">Unknown</h6>
                     <p class="mb-0 text-xs">About files I can..</p>
                   </div>
                   <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
@@ -227,7 +227,7 @@
                     <img src="../assets/img/team-4.jpg" alt="kal" class="border-radius-lg shadow">
                   </div>
                   <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Peterson</h6>
+                    <h6 class="mb-0 text-sm">Unknown</h6>
                     <p class="mb-0 text-xs">Have a great afternoon..</p>
                   </div>
                   <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
@@ -237,7 +237,7 @@
                     <img src="../assets/img/team-3.jpg" alt="kal" class="border-radius-lg shadow">
                   </div>
                   <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Nick Daniel</h6>
+                    <h6 class="mb-0 text-sm">Unknown</h6>
                     <p class="mb-0 text-xs">Hi! I need more information..</p>
                   </div>
                   <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
@@ -246,7 +246,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 mt-4">
+        {{-- <div class="col-12 mt-4">
           <div class="card mb-4">
             <div class="card-header pb-0 p-3">
               <h6 class="mb-1">Projects</h6>
@@ -378,7 +378,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
       @include('layouts.footers.auth.footer')
     </div>

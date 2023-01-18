@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Departement;
 use Illuminate\Http\Request;
+
 
 class DepartementController extends Controller
 {
@@ -11,10 +13,17 @@ class DepartementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         //
-        return view ('pages/departement/index');
+        $departements = Departement::orderBy('id_dept','desc');
+
+        return view('pages.departement.index', compact('departements'));
     }
 
     /**
@@ -25,7 +34,7 @@ class DepartementController extends Controller
     public function create()
     {
         //
-        return view ('pages/departement/create');
+        return view('pages.departement.create');
     }
 
     /**
@@ -37,7 +46,16 @@ class DepartementController extends Controller
     public function store(Request $request)
     {
         //
-        return 'Get';
+        $request->validate([
+            'id' => 'required|numeric|unique:departements,id_dept',
+            'code' => 'required|min:3',
+            'departement' => 'required|min:25',
+        ]);
+        Departement::create($request->all());
+
+        return redirect()->route('departement.index')
+                        ->with('success','Departement has Created done');
+        
     }
 
     /**
@@ -46,9 +64,10 @@ class DepartementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Departement $departement)
     {
         //
+        return view('pages.departement.show',compact('deparrement'));
     }
 
     /**
@@ -57,9 +76,10 @@ class DepartementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Departement $departement)
     {
         //
+        return view('pages.departement.edit',compact('departement'));
     }
 
     /**
@@ -69,9 +89,19 @@ class DepartementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Departement $departement)
     {
         //
+        $request->validate([
+            'id' => 'required|numeric|unique:departements,id_dept',
+            'code' => 'required|min:3',
+            'departement' => 'required|min:25',
+        ]);
+      
+        $departement->update($request->all());
+      
+        return redirect()->route('departement.index')
+                        ->with('success','Departement updated successfully');
     }
 
     /**
@@ -80,8 +110,12 @@ class DepartementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Departement $departement)
     {
         //
+        $departement->delete();
+       
+        return redirect()->route('departement.index')
+                        ->with('success','Departement deleted successfully');
     }
 }

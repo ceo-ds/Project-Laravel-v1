@@ -71,9 +71,19 @@
         </a>
       </li>
       <li class="nav-item mt-2">
-        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Example pages</h6>
+        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Other Page</h6>
       </li>
-      <li class="nav-item">
+      <li class="nav-item pb-2">
+        <a class="nav-link {{ (Request::is('siswa') ? 'active' : '') }}" href="{{ url('siswa') }}">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i style="font-size: 1rem;" class="fa fa-address-card ps-2 pe-2 text-center text-dark {{ (Request::is('siswa') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
+            </div>
+            <span class="nav-link-text ms-1">Siswa</span>
+        </a>
+      </li>
+
+
+      {{-- <li class="nav-item">
         <a class="nav-link {{ (Request::is('tables') ? 'active' : '') }}" href="{{ url('tables') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -92,8 +102,10 @@
           </div>
           <span class="nav-link-text ms-1">Tables</span>
         </a>
-      </li>
-      <li class="nav-item">
+      </li> --}}
+
+
+      {{-- <li class="nav-item">
         <a class="nav-link {{ (Request::is('billing') ? 'active' : '') }}" href="{{ url('billing') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -112,8 +124,10 @@
           </div>
           <span class="nav-link-text ms-1">Billing</span>
         </a>
-      </li>
-      <li class="nav-item">
+      </li> --}}
+
+
+      {{-- <li class="nav-item">
         <a class="nav-link {{ (Request::is('virtual-reality') ? 'active' : '') }}" href="{{ url('virtual-reality') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -133,8 +147,10 @@
           </div>
           <span class="nav-link-text ms-1">Virtual Reality</span>
         </a>
-      </li>
-      <li class="nav-item">
+      </li> --}}
+
+      
+      {{-- <li class="nav-item">
         <a class="nav-link {{ (Request::is('rtl') ? 'active' : '') }}" href="{{ url('rtl') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -154,14 +170,16 @@
           </div>
           <span class="nav-link-text ms-1">RTL</span>
         </a>
-      </li>
+      </li> --}}
+
+
       <li class="nav-item mt-3">
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
       </li>
       <li class="nav-item">
         <a class="nav-link {{ (Request::is('profile') ? 'active' : '') }}" href="{{ url('profile') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-            <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="#" xmlns:xlink="#">
               <title>customer-support</title>
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g transform="translate(-1717.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -179,7 +197,9 @@
           <span class="nav-link-text ms-1">Profile</span>
         </a>
       </li>
-      <li class="nav-item">
+
+
+      {{-- <li class="nav-item">
         <a class="nav-link  " href="{{ url('static-sign-in') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -198,8 +218,10 @@
           </div>
           <span class="nav-link-text ms-1">Sign In</span>
         </a>
-      </li>
-      <li class="nav-item">
+      </li> --}}
+
+      
+      {{-- <li class="nav-item">
         <a class="nav-link  " href="{{ url('static-sign-up') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -220,7 +242,9 @@
           </div>
           <span class="nav-link-text ms-1">Sign Up</span>
         </a>
-      </li>
+      </li> --}}
+
+
       {{-- <li class="nav-link mb-0">
         <a href="https://www.creative-tim.com/product/soft-ui-dashboard-pro-laravel" class="btn btn-primary btn-md active px-5 text-white" target="_blank" role="button" aria-pressed="true">
             Upgrade to PRO</a>
