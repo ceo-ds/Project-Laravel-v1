@@ -25,26 +25,29 @@
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NO</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Code Departement</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Departement</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Total departement</th>
-                      <th class="text-secondary opacity-7"></th>
+                      <th class="text-secondary opacity-7">Act</th>
                     </tr>
                   </thead>
-                    @foreach ($departements as $departement)
+                    @php $no = 1; @endphp
+                    @foreach ($departement as $data)
                         <tr>
-                            <td>{{ $departement->id }}</td>
-                            <td>{{ $departement->code }}</td>
-                            <td>{{ $departement->departement }}</td>
+                            <td>{{ $no++ }}</td>
+                            <td>{{ $data->id_dept }}</td>
+                            <td>{{ $data->id_secd }}</td>
+                            <td>{{ $data->name }}</td>
                             <td>
-                                {{-- <form action="{{ route('departement.destroy',$departement->id) }}" method="POST">
-                                    <a class="btn btn-info" href="{{ route('departement.show',$departement->id) }}"><i class="fa fa-info"></i></a>
-                                    <a class="btn btn-primary" href="{{ route('departement.edit',$departement->id) }}"><i class="fa fa-pen"></i></a>
+                                <form action="{{ route('departement.destroy',$data->id_dept) }}" method="POST">
+                                    <a class="btn btn-info" href="{{ route('departement.show',$data->id_dept) }}"><i class="fa fa-info"></i></a>
+                                    <a class="btn btn-primary" href="{{ route('departement.edit',$data->id_dept) }}"><i class="fa fa-pen"></i></a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                </form> --}}
+                                </form>
                             </td>
                         </tr>
                     @endforeach

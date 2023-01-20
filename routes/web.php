@@ -8,7 +8,6 @@ use App\Http\Controllers\ResetController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\DepartementController;
 use App\Http\Controllers\SiswaController;
-use App\Models\Departement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;

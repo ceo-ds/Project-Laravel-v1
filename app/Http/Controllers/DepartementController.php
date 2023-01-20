@@ -21,9 +21,9 @@ class DepartementController extends Controller
     public function index()
     {
         //
-        $departements = Departement::orderBy('id_dept','desc');
+        $departement = Departement::all();
 
-        return view('pages.departement.index', compact('departements'));
+        return view('pages.departement.index', compact('departement'));
     }
 
     /**
@@ -45,16 +45,28 @@ class DepartementController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $request->validate([
-            'id' => 'required|numeric|unique:departements,id_dept',
-            'code' => 'required|min:3',
-            'departement' => 'required|min:25',
-        ]);
-        Departement::create($request->all());
+        $validated = $request->validate([
+            'id_dept' => 'required|unique:departements|max:4',
+            'id_secd' => 'required|unique:departements|max:3',
+            'name' => 'required',
 
+        ]);
+
+        // //
+        
+        // $request->validate([
+        //     'id' => 'required|numeric|unique:departements,id_dept',
+        //     'code' => 'required|min:3',
+        //     'departement' => 'required|min:25',
+        // ]);
+        
+        $departement = new Departement();
+        $departement->id_dept = $request->id_dept;
+        $departement->id_secd = $request->id_secd;
+        $departement->name = $request->name;
+        $departement->save();
         return redirect()->route('departement.index')
-                        ->with('success','Departement has Created done');
+            ->with('success', 'Data Berhasil Di Tambahkan');
         
     }
 
@@ -64,9 +76,10 @@ class DepartementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Departement $departement)
+    public function show($id)
     {
         //
+        $departement = Departements::findOrFail($id);
         return view('pages.departement.show',compact('deparrement'));
     }
 
@@ -76,9 +89,10 @@ class DepartementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Departement $departement)
+    public function edit($id)
     {
         //
+        $departement = Departement::findOrFail($id);
         return view('pages.departement.edit',compact('departement'));
     }
 
@@ -92,16 +106,29 @@ class DepartementController extends Controller
     public function update(Request $request, Departement $departement)
     {
         //
-        $request->validate([
-            'id' => 'required|numeric|unique:departements,id_dept',
-            'code' => 'required|min:3',
-            'departement' => 'required|min:25',
+        $validated = $request->validate([
+            'id_dept' => 'required|unique:departements|max:4',
+            'id_secd' => 'required|unique:departements|max:3',
+            'departements' => 'required',
+
         ]);
-      
-        $departement->update($request->all());
-      
+
+        // //
+        
+        // $request->validate([
+        //     'id' => 'required|numeric|unique:departements,id_dept',
+        //     'code' => 'required|min:3',
+        //     'departement' => 'required|min:25',
+        // ]);
+        
+        $departement = new Departement();
+        $departement->id_dept = $request->id_dept;
+        $departement->id_secd = $request->id_secd;
+        $departement->name = $request->name;
+        $departement->save();
         return redirect()->route('departement.index')
-                        ->with('success','Departement updated successfully');
+            ->with('success', 'Data Berhasil Di Tambahkan');
+        
     }
 
     /**
@@ -112,10 +139,15 @@ class DepartementController extends Controller
      */
     public function destroy(Departement $departement)
     {
-        //
+        $departement = Departement::findOrFail($id);
         $departement->delete();
-       
         return redirect()->route('departement.index')
-                        ->with('success','Departement deleted successfully');
+            ->with('success', 'Data Berhasil Di Hapus');
+
+        // //
+        // $departement->delete();
+       
+        // return redirect()->route('departement.index')
+        //                 ->with('success','Departement deleted successfully'  );
     }
 }

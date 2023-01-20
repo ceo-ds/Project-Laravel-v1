@@ -20,19 +20,42 @@
             <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
                 <div class="card z-index-0">
                     <div class="card-body">
-                        <form role="form text-left" method="POST" action='{{ url('departement') }}'>
+                        <form role="form text-left" action="{{ route('departement.store') }}" method="post">
                             @csrf
-                            <input type="text" class="form-control" placeholder="ID" name="id"
-                                id="id_dept" aria-label="ID" aria-describedby="id-addon"
-                                style="margin: 2px 0px 5px 0px">
-                            <input type="text" class="form-control" placeholder="Code" name="code"
-                                id="id_secd" aria-label="Code" aria-describedby="code-addon"
-                                style="margin: 2px 0px 5px 0px">
-                            <input type="text" class="form-control" placeholder="Departement" name="departement"
-                                id="departement" aria-label="Departement" aria-describedby="departement-addon"
-                                style="margin: 2px 0px 5px 0px">
-                            <div class="text-center">
-                                <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Add</button>
+                            <div class="mb-3">
+                                <label class="form-label">ID</label>
+                                <input type="text" class="form-control  @error('id_dept') is-invalid @enderror"
+                                    name="id_dept">
+                                @error('id_dept')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">CODE</label>
+                                <input type="text" class="form-control  @error('id_secd') is-invalid @enderror"
+                                    name="id_secd">
+                                @error('id_secd')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Departement</label>
+                                <input type="text" class="form-control  @error('name') is-invalid @enderror"
+                                    name="name">
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="submit">Save</button>
+                                </div>
                             </div>
                         </form>
                     </div>
