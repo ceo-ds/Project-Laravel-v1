@@ -79,8 +79,9 @@ class DepartementController extends Controller
     public function show($id)
     {
         //
-        $departement = Departements::findOrFail($id);
-        return view('pages.departement.show',compact('deparrement'));
+        $departement = Departement::findOrFail($id);
+        return "Selamat Routing Anda Sudah Benar";
+        // return view('pages.departement.show',compact('departement'));
     }
 
     /**
@@ -137,7 +138,7 @@ class DepartementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Departement $departement)
+    public function destroy($id)
     {
         $departement = Departement::findOrFail($id);
         $departement->delete();

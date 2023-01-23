@@ -298,6 +298,9 @@ th {
   border-style: solid;
   border-width: 0;
 }
+#cntr {
+  align-items: center;
+}
 
 label {
   display: inline-block;
@@ -2350,6 +2353,9 @@ progress {
 .gy-xxl-12 {
     --bs-gutter-y: 16rem;
   }
+}
+.tbl{
+  text-align: center;
 }
 .table {
   --bs-table-bg: transparent;

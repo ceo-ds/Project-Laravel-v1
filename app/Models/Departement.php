@@ -10,7 +10,7 @@ class Departement extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['id_dept','id_secd','name'];
+    public $fillable = ['id_dept','id_secd','name'];
     protected $table = 'departements';
     public $timestamps = false;
     public $created_at = false;

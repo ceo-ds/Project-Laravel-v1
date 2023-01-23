@@ -11,8 +11,8 @@
               <h6>Authors table</h6>
             </div>
             <div class="text-center">
-              <a href="{{ route('departement.create') }}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                <button type="buttom" class="btn bg-gradient-dark w-100 my-4 mb-2">Add</button>
+              <a href="{{ route('departement.create') }}" class="text-secondary font-weight-bold" data-toggle="tooltip" data-original-title="Edit user">
+                <button type="buttom" class="btn bg-gradient-dark w-10   my-4 mb-5">Add</button>
               </a>
           </div>
           @if ($message = Session::get('success'))
@@ -25,28 +25,30 @@
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NO</th>
+                      <th class="tbl text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NO</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Code Departement</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Departement</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Code</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Departement</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Total departement</th>
-                      <th class="text-secondary opacity-7">Act</th>
+                      <th class="text-secondary opacity-10"><i class="fa fa-tools"></i></th>
                     </tr>
                   </thead>
                     @php $no = 1; @endphp
+                    @php $num = 1; @endphp
                     @foreach ($departement as $data)
                         <tr>
-                            <td>{{ $no++ }}</td>
+                            <td class="tbl">{{ $no++ }}</td>
                             <td>{{ $data->id_dept }}</td>
                             <td>{{ $data->id_secd }}</td>
                             <td>{{ $data->name }}</td>
+                            <td class="tbl">{{ $num++ + 1000}}</td>
                             <td>
-                                <form action="{{ route('departement.destroy',$data->id_dept) }}" method="POST">
-                                    <a class="btn btn-info" href="{{ route('departement.show',$data->id_dept) }}"><i class="fa fa-info"></i></a>
-                                    <a class="btn btn-primary" href="{{ route('departement.edit',$data->id_dept) }}"><i class="fa fa-pen"></i></a>
-                                    @csrf
+                                <form action="{{ route('departement.destroy',$data->id) }}" method="post">
+                                  @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                    <a class="btn btn-info" href="{{ route('departement.show',$data->id) }}"><i class="fa fa-info"></i></a>
+                                    <a class="btn btn-primary" href="{{ route('departement.edit',$data->id) }}"><i class="fa fa-pen"></i></a>
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin?')"><i class="fa fa-trash"></i></button>
                                 </form>
                             </td>
                         </tr>
