@@ -117,7 +117,7 @@ class LocationController extends Controller
             'country' => 'required',
         ]);
 
-        $location = new Location();
+        $location = Location::findOrFail($id);
         $location->id_loc = $request->id_loc;
         $location->id_secl = $request->id_secl;
         $location->name = $request->name;

@@ -31,15 +31,14 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('dashboard', function () {
 		return view('dashboard');
 	})->name('dashboard');
+	Route::resource('departement', DepartementController::class);
+	Route::resource('location', LocationController::class);
 
 	Route::get('billing', function () {
 		return view('billing');
 	})->name('billing');
 
-	Route::resource('departement', DepartementController::class);
-	Route::resource('siswa', SiswaController::class);
-	Route::resource('siswa', SiswaController::class);
-	Route::resource('location', LocationController::class);
+	
 
 
 	Route::get('profile', function () {

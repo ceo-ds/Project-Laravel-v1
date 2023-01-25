@@ -71,14 +71,14 @@
         </a>
       </li>
       <li class="nav-item mt-2">
-        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Other Page</h6>
+        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Settings</h6>
       </li>
       <li class="nav-item pb-2">
-        <a class="nav-link {{ (Request::is('siswa') ? 'active' : '') }}" href="{{ url('siswa') }}">
+        <a class="nav-link {{ (Request::is('location') ? 'active' : '') }}" href="{{ url('location') }}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i style="font-size: 1rem;" class="fa fa-address-card ps-2 pe-2 text-center text-dark {{ (Request::is('siswa') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
+                <i style="font-size: 1rem;" class="fa fa-map ps-2 pe-2 text-center text-dark {{ (Request::is('location') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
             </div>
-            <span class="nav-link-text ms-1">Siswa</span>
+            <span class="nav-link-text ms-1">Location</span>
         </a>
       </li>
 
